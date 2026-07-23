@@ -49,11 +49,12 @@
     });
   });
 
-  // Reveal on scroll
+  // Reveal on scroll (hero content animates in immediately)
   const reveals = document.querySelectorAll(".reveal");
   reveals.forEach((el) => {
     const delay = el.getAttribute("data-delay");
     if (delay) el.style.setProperty("--delay", `${delay}s`);
+    if (el.closest(".hero")) el.classList.add("in");
   });
 
   if ("IntersectionObserver" in window) {
@@ -66,9 +67,11 @@
           }
         });
       },
-      { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -5% 0px" }
     );
-    reveals.forEach((el) => io.observe(el));
+    reveals.forEach((el) => {
+      if (!el.classList.contains("in")) io.observe(el);
+    });
   } else {
     reveals.forEach((el) => el.classList.add("in"));
   }
