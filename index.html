@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CMU ML Research — Carnegie Mellon University</title>
+  <meta name="description" content="Student-led machine learning research at Carnegie Mellon. We learn together, build rigorously, and aim to publish at top venues." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23C41230'/><circle cx='10' cy='12' r='2' fill='white'/><circle cx='22' cy='12' r='2' fill='white'/><circle cx='16' cy='22' r='2' fill='white'/><path d='M10 12 L16 22 L22 12' stroke='white' stroke-width='1.5' fill='none'/></svg>" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="logo" href="#top">
+      <span class="logo-mark" aria-hidden="true">
+        <i></i><i></i><i></i>
+        <i></i><i></i><i></i>
+      </span>
+      <span class="logo-text">cmu ml research</span>
+    </a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#join">Join</a>
+      <a href="#team">Team</a>
+    </nav>
+    <a class="btn btn-nav" href="#join">Express interest <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-wash" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="hero-eyebrow reveal">
+          <span class="pulse-dot"></span>
+          Carnegie Mellon University · Student Research Collective
+        </p>
+        <h1 class="hero-title">
+          <span class="title-line reveal" data-delay="0.1">[Machine Learning]</span>
+          <span class="title-line reveal typewriter" data-delay="0.25" data-text="Research Collective._"></span>
+        </h1>
+        <p class="hero-lede reveal" data-delay="0.4">
+          We work together across frontiers of modern ML — learning deeply,
+          building carefully, and aiming to publish at the world’s top conferences.
+        </p>
+        <div class="hero-cta reveal" data-delay="0.55">
+          <a class="btn btn-primary" href="#join">Get involved <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost" href="#research">Explore research</a>
+        </div>
+      </div>
+      <button class="scroll-hint" type="button" aria-label="Scroll to about" data-scroll="#about">
+        <span></span>
+      </button>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section-head">
+        <p class="section-kicker reveal">What we do</p>
+        <h2 class="section-title reveal">
+          A collaborative lab for curious minds who want to
+          <em>ship ideas into papers</em>.
+        </h2>
+        <p class="section-lede reveal">
+          We are a student-led research group at CMU. Members pick ambitious ML
+          questions, run disciplined experiments, read the literature together,
+          and push toward submissions at elite venues.
+        </p>
+      </div>
+
+      <div class="topic-rail" aria-label="Research topics">
+        <div class="topic-track">
+          <span>Large Language Models</span>
+          <span>Interpretability</span>
+          <span>Reinforcement Learning</span>
+          <span>Multimodal Learning</span>
+          <span>Representation Learning</span>
+          <span>AI Safety &amp; Alignment</span>
+          <span>Computer Vision</span>
+          <span>Efficient ML</span>
+          <span>Reasoning &amp; Agents</span>
+          <span>Causal Inference</span>
+          <span>Large Language Models</span>
+          <span>Interpretability</span>
+          <span>Reinforcement Learning</span>
+          <span>Multimodal Learning</span>
+          <span>Representation Learning</span>
+          <span>AI Safety &amp; Alignment</span>
+          <span>Computer Vision</span>
+          <span>Efficient ML</span>
+          <span>Reasoning &amp; Agents</span>
+          <span>Causal Inference</span>
+        </div>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar reveal">
+          <span class="pillar-index">01</span>
+          <h3>Learn together</h3>
+          <p>Paper clubs, shared notes, and rigorous critique — we treat reading as a craft.</p>
+        </article>
+        <article class="pillar reveal" data-delay="0.1">
+          <span class="pillar-index">02</span>
+          <h3>Build experiments</h3>
+          <p>From baselines to ablations — we design studies that can actually convince reviewers.</p>
+        </article>
+        <article class="pillar reveal" data-delay="0.2">
+          <span class="pillar-index">03</span>
+          <h3>Publish upward</h3>
+          <p>Our north star is clear: contribute knowledge at NeurIPS, ICML, ICLR, and peer venues.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="research" class="section research">
+      <div class="research-grid">
+        <div class="research-copy">
+          <p class="section-kicker reveal">Research agenda</p>
+          <h2 class="section-title reveal">Topics we explore</h2>
+          <p class="section-lede reveal">
+            Interests evolve with the field. Right now we orbit questions around
+            how models reason, how they fail, and how to make them trustworthy
+            and useful at scale.
+          </p>
+        </div>
+        <ul class="topic-list">
+          <li class="reveal"><strong>LLMs &amp; reasoning</strong><span>Chain-of-thought, faithfulness, agents</span></li>
+          <li class="reveal" data-delay="0.05"><strong>Interpretability</strong><span>Mechanistic insight into trained systems</span></li>
+          <li class="reveal" data-delay="0.1"><strong>RL &amp; decision-making</strong><span>Policy learning, reward design, control</span></li>
+          <li class="reveal" data-delay="0.15"><strong>Vision &amp; multimodality</strong><span>Grounded perception and generation</span></li>
+          <li class="reveal" data-delay="0.2"><strong>Efficiency</strong><span>Compression, distillation, scalable training</span></li>
+          <li class="reveal" data-delay="0.25"><strong>Safety &amp; alignment</strong><span>Robustness, evaluation, responsible deployment</span></li>
+        </ul>
+      </div>
+
+      <div class="venues reveal">
+        <p class="venues-label">Target venues</p>
+        <div class="venue-row">
+          <span>NeurIPS</span>
+          <span>ICML</span>
+          <span>ICLR</span>
+          <span>ACL</span>
+          <span>EMNLP</span>
+          <span>CVPR</span>
+          <span>AAAI</span>
+          <span>AISTATS</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" class="section join">
+      <div class="join-panel reveal">
+        <div class="join-copy">
+          <p class="section-kicker">Join the collective</p>
+          <h2 class="section-title">Interested in researching with us?</h2>
+          <p class="section-lede">
+            Drop your details — we’ll get an alert and follow up. No lengthy application.
+          </p>
+        </div>
+        <form
+          class="interest-form"
+          action="https://formsubmit.co/akanduko@andrew.cmu.edu"
+          method="POST"
+          id="interest-form"
+        >
+          <input type="hidden" name="_subject" value="CMU ML Research — Interest Form" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_next" value="" id="form-next" />
+
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required placeholder="Your name" autocomplete="name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="you@andrew.cmu.edu" autocomplete="email" />
+          </label>
+          <label class="full">
+            <span>Why are you interested? <em>(optional)</em></span>
+            <textarea name="message" rows="3" placeholder="A sentence or two is plenty."></textarea>
+          </label>
+          <button class="btn btn-primary full" type="submit">
+            Send interest <span aria-hidden="true">↗</span>
+          </button>
+          <p class="form-note">Sends an email alert to the PI. First submit may ask you to confirm via FormSubmit.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="team" class="section team">
+      <div class="section-head centered">
+        <p class="section-kicker reveal">Team</p>
+        <h2 class="section-title reveal">Who’s building this</h2>
+      </div>
+      <article class="member reveal">
+        <div class="member-avatar" aria-hidden="true">
+          <canvas id="avatar-canvas"></canvas>
+          <span>AK</span>
+        </div>
+        <div class="member-body">
+          <h3>Aarush Kandukoori</h3>
+          <p class="member-role">President &amp; Principal Investigator</p>
+          <p class="member-bio">
+            Leading the collective’s research direction, collaborations, and path to publication.
+          </p>
+          <a class="member-email" href="mailto:akanduko@andrew.cmu.edu">
+            akanduko [at] andrew [dot] cmu [dot] edu
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="logo-mark" aria-hidden="true">
+        <i></i><i></i><i></i>
+        <i></i><i></i><i></i>
+      </span>
+      <div>
+        <strong>CMU ML Research</strong>
+        <p>Carnegie Mellon University</p>
+      </div>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> CMU ML Research Collective. Built for curiosity.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
