@@ -672,7 +672,11 @@ main,
   place-items: center;
 }
 
-#avatar-canvas {
+.member + .member {
+  margin-top: 1.25rem;
+}
+
+.avatar-canvas {
   position: absolute;
   inset: 0;
   width: 100%;

@@ -232,8 +232,7 @@
   }
 
   // Avatar micro-network
-  const avatarCanvas = document.getElementById("avatar-canvas");
-  if (avatarCanvas) {
+  document.querySelectorAll(".avatar-canvas").forEach((avatarCanvas) => {
     const ctx = avatarCanvas.getContext("2d");
     const size = 140;
     avatarCanvas.width = size * 2;
@@ -277,7 +276,7 @@
       requestAnimationFrame(render);
     };
     render();
-  }
+  });
 
   // Form UX: mark success hash if returned
   if (window.location.hash === "#join") {
