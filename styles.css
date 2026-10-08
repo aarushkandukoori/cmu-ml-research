@@ -723,6 +723,137 @@ main,
   border-color: var(--accent);
 }
 
+/* Researcher roster: one compact row each, click to open the bio */
+.roster {
+  max-width: 640px;
+  margin: 2.5rem auto 0;
+}
+
+.roster-label {
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.roster-label span {
+  margin-left: 0.4rem;
+  color: var(--accent);
+}
+
+.researcher {
+  border-bottom: 1px solid var(--line);
+}
+
+.researcher:first-of-type {
+  border-top: 1px solid var(--line);
+}
+
+.researcher summary {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.8rem 0.5rem;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.researcher summary::-webkit-details-marker {
+  display: none;
+}
+
+.researcher summary::after {
+  content: "";
+  flex: none;
+  margin-left: auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 1.5px solid var(--ink-soft);
+  border-bottom: 1.5px solid var(--ink-soft);
+  transform: translateY(-25%) rotate(45deg);
+  transition: transform 0.25s var(--ease);
+}
+
+.researcher[open] summary::after {
+  transform: translateY(25%) rotate(-135deg);
+}
+
+/* Hover only on real pointers, so a tapped row on a phone doesn't stay highlighted */
+@media (hover: hover) {
+  .researcher summary:hover {
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .researcher summary:hover .researcher-name {
+    color: var(--accent);
+  }
+}
+
+.researcher summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.researcher-avatar {
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #1a1714;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.researcher-head {
+  display: grid;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.researcher-name {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  transition: color 0.2s ease;
+}
+
+.researcher-focus {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.researcher-body {
+  padding: 0.1rem 0.5rem 1.1rem calc(42px + 1.4rem);
+}
+
+.researcher[open] .researcher-body {
+  animation: rosterOpen 0.35s var(--ease);
+}
+
+.researcher-body p {
+  margin: 0 0 0.75rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+@keyframes rosterOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Footer */
 .site-footer {
   display: flex;
@@ -790,6 +921,10 @@ main,
     grid-template-columns: 1fr;
     text-align: center;
     justify-items: center;
+  }
+
+  .researcher-body {
+    padding-left: 0.5rem;
   }
 
   .hero-wash {
